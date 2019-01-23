@@ -193,7 +193,7 @@ class Body extends Interactor{
      * This value can be changed even if Body is inside of a Space.
      */
     #if nape_swc@:isVar #end
-    public var type(get_type,set_type):BodyType;
+    public var type(get,set):BodyType;
     inline function get_type():BodyType{
         return ZPP_Body.types[zpp_inner.type];
     }
@@ -255,7 +255,7 @@ class Body extends Interactor{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var isBullet(get_isBullet,set_isBullet):Bool;
+    public var isBullet(get,set):Bool;
     inline function get_isBullet():Bool{
         return zpp_inner.bulletEnabled;
     }
@@ -274,7 +274,7 @@ class Body extends Interactor{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var disableCCD(get_disableCCD,set_disableCCD):Bool;
+    public var disableCCD(get,set):Bool;
     inline function get_disableCCD():Bool{
         return zpp_inner.disableCCD;
     }
@@ -345,7 +345,7 @@ class Body extends Interactor{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var shapes(get_shapes,never):ShapeList;
+    public var shapes(get,never):ShapeList;
     inline function get_shapes():ShapeList{
         return zpp_inner.wrap_shapes;
     }
@@ -359,7 +359,7 @@ class Body extends Interactor{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var compound(get_compound,set_compound):Null<Compound>;
+    public var compound(get,set):Null<Compound>;
     inline function get_compound():Null<Compound>{
         return if(zpp_inner.compound==null)null else zpp_inner.compound.outer;
     }
@@ -381,7 +381,7 @@ class Body extends Interactor{
      * is the Compound that is added/removed from a Space.
      */
     #if nape_swc@:isVar #end
-    public var space(get_space,set_space):Null<Space>;
+    public var space(get,set):Null<Space>;
     inline function get_space():Null<Space>{
         return if(zpp_inner.space==null)null else zpp_inner.space.outer;
     }
@@ -408,7 +408,7 @@ class Body extends Interactor{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var arbiters(get_arbiters,never):ArbiterList;
+    public var arbiters(get,never):ArbiterList;
     inline function get_arbiters():ArbiterList{
         if(zpp_inner.wrap_arbiters==null)zpp_inner.wrap_arbiters=ZPP_ArbiterList.get(zpp_inner.arbiters,true);
         return zpp_inner.wrap_arbiters;
@@ -424,7 +424,7 @@ class Body extends Interactor{
      * then you should make use of the nape-hacks module.
      */
     #if nape_swc@:isVar #end
-    public var isSleeping(get_isSleeping,never):Bool;
+    public var isSleeping(get,never):Bool;
     inline function get_isSleeping():Bool{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.space==null)throw "Error: isSleeping makes no sense if the object is not contained within a Space";
@@ -439,7 +439,7 @@ class Body extends Interactor{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var constraints(get_constraints,never):ConstraintList;
+    public var constraints(get,never):ConstraintList;
     inline function get_constraints():ConstraintList{
         if(zpp_inner.wrap_constraints==null)zpp_inner.wrap_constraints=ZPP_ConstraintList.get(zpp_inner.constraints,true);
         return zpp_inner.wrap_constraints;
@@ -560,7 +560,7 @@ class Body extends Interactor{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var position(get_position,set_position):Vec2;
+    public var position(get,set):Vec2;
     inline function get_position():Vec2{
         if(zpp_inner.wrap_pos==null)zpp_inner.setupPosition();
         return zpp_inner.wrap_pos;
@@ -589,7 +589,7 @@ class Body extends Interactor{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var velocity(get_velocity,set_velocity):Vec2;
+    public var velocity(get,set):Vec2;
     inline function get_velocity():Vec2{
         if(zpp_inner.wrap_vel==null)zpp_inner.setupVelocity();
         return zpp_inner.wrap_vel;
@@ -664,7 +664,7 @@ class Body extends Interactor{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var kinematicVel(get_kinematicVel,set_kinematicVel):Vec2;
+    public var kinematicVel(get,set):Vec2;
     inline function get_kinematicVel():Vec2{
         if(zpp_inner.wrap_kinvel==null)zpp_inner.setupkinvel();
         return zpp_inner.wrap_kinvel;
@@ -696,7 +696,7 @@ class Body extends Interactor{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var surfaceVel(get_surfaceVel,set_surfaceVel):Vec2;
+    public var surfaceVel(get,set):Vec2;
     inline function get_surfaceVel():Vec2{
         if(zpp_inner.wrap_svel==null)zpp_inner.setupsvel();
         return zpp_inner.wrap_svel;
@@ -725,7 +725,7 @@ class Body extends Interactor{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var force(get_force,set_force):Vec2;
+    public var force(get,set):Vec2;
     inline function get_force():Vec2{
         if(zpp_inner.wrap_force==null)zpp_inner.setupForce();
         return zpp_inner.wrap_force;
@@ -751,7 +751,7 @@ class Body extends Interactor{
      * constraints using the UserConstraint API.
      */
     #if nape_swc@:isVar #end
-    public var constraintVelocity(get_constraintVelocity,never):Vec3;
+    public var constraintVelocity(get,never):Vec3;
     inline function get_constraintVelocity():Vec3{
         if(zpp_inner.wrapcvel==null)zpp_inner.setup_cvel();
         return zpp_inner.wrapcvel;
@@ -769,7 +769,7 @@ class Body extends Interactor{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var rotation(get_rotation,set_rotation):Float;
+    public var rotation(get,set):Float;
     inline function get_rotation():Float{
         return zpp_inner.rot;
     }
@@ -801,7 +801,7 @@ class Body extends Interactor{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var angularVel(get_angularVel,set_angularVel):Float;
+    public var angularVel(get,set):Float;
     inline function get_angularVel():Float{
         return zpp_inner.angvel;
     }
@@ -836,7 +836,7 @@ class Body extends Interactor{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var kinAngVel(get_kinAngVel,set_kinAngVel):Float;
+    public var kinAngVel(get,set):Float;
     inline function get_kinAngVel():Float{
         return zpp_inner.kinangvel;
     }
@@ -865,7 +865,7 @@ class Body extends Interactor{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var torque(get_torque,set_torque):Float;
+    public var torque(get,set):Float;
     inline function get_torque():Float{
         return zpp_inner.torque;
     }
@@ -897,7 +897,7 @@ class Body extends Interactor{
      * This AABB is immutable.
      */
     #if nape_swc@:isVar #end
-    public var bounds(get_bounds,never):AABB;
+    public var bounds(get,never):AABB;
     inline function get_bounds():AABB{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no bounds";
@@ -914,7 +914,7 @@ class Body extends Interactor{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var allowMovement(get_allowMovement,set_allowMovement):Bool;
+    public var allowMovement(get,set):Bool;
     inline function get_allowMovement():Bool{
         return!zpp_inner.nomove;
     }
@@ -938,7 +938,7 @@ class Body extends Interactor{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var allowRotation(get_allowRotation,set_allowRotation):Bool;
+    public var allowRotation(get,set):Bool;
     inline function get_allowRotation():Bool{
         return!zpp_inner.norotate;
     }
@@ -962,7 +962,7 @@ class Body extends Interactor{
      * @default MassMode.DEFAULT
      */
     #if nape_swc@:isVar #end
-    public var massMode(get_massMode,set_massMode):MassMode;
+    public var massMode(get,set):MassMode;
     inline function get_massMode():MassMode{
         return[MassMode.DEFAULT,MassMode.FIXED][zpp_inner.massMode];
     }
@@ -988,7 +988,7 @@ class Body extends Interactor{
      * as well as properties like allowMovement.
      */
     #if nape_swc@:isVar #end
-    public var constraintMass(get_constraintMass,never):Float;
+    public var constraintMass(get,never):Float;
     inline function get_constraintMass():Float{
         if(!zpp_inner.world)zpp_inner.validate_mass();
         return zpp_inner.smass;
@@ -1006,7 +1006,7 @@ class Body extends Interactor{
      * implicitly changing the massMode to MassMode.FIXED
      */
     #if nape_swc@:isVar #end
-    public var mass(get_mass,set_mass):Float;
+    public var mass(get,set):Float;
     inline function get_mass():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no mass";
@@ -1042,7 +1042,7 @@ class Body extends Interactor{
      * @default GravMassMode.DEFAULT
      */
     #if nape_swc@:isVar #end
-    public var gravMassMode(get_gravMassMode,set_gravMassMode):GravMassMode;
+    public var gravMassMode(get,set):GravMassMode;
     inline function get_gravMassMode():GravMassMode{
         return[GravMassMode.DEFAULT,GravMassMode.FIXED,GravMassMode.SCALED][zpp_inner.massMode];
     }
@@ -1068,7 +1068,7 @@ class Body extends Interactor{
      * Set to 0 to disable gravity for this Body.
      */
     #if nape_swc@:isVar #end
-    public var gravMass(get_gravMass,set_gravMass):Float;
+    public var gravMass(get,set):Float;
     inline function get_gravMass():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no gravMass";
@@ -1105,7 +1105,7 @@ class Body extends Interactor{
      * multiplied with the Body's mass.
      */
     #if nape_swc@:isVar #end
-    public var gravMassScale(get_gravMassScale,set_gravMassScale):Float;
+    public var gravMassScale(get,set):Float;
     inline function get_gravMassScale():Float{
         zpp_inner.validate_gravMassScale();
         #if(!NAPE_RELEASE_BUILD)
@@ -1138,7 +1138,7 @@ class Body extends Interactor{
      * @default InertiaMode.DEFAULT
      */
     #if nape_swc@:isVar #end
-    public var inertiaMode(get_inertiaMode,set_inertiaMode):InertiaMode;
+    public var inertiaMode(get,set):InertiaMode;
     inline function get_inertiaMode():InertiaMode{
         return[InertiaMode.DEFAULT,InertiaMode.FIXED][zpp_inner.inertiaMode];
     }
@@ -1164,7 +1164,7 @@ class Body extends Interactor{
      * As well as properties like allowRotation.
      */
     #if nape_swc@:isVar #end
-    public var constraintInertia(get_constraintInertia,never):Float;
+    public var constraintInertia(get,never):Float;
     inline function get_constraintInertia():Float{
         if(!zpp_inner.world)zpp_inner.validate_inertia();
         return zpp_inner.sinertia;
@@ -1175,7 +1175,7 @@ class Body extends Interactor{
      * Setting this value will implicitly change the inertiaMode to FIXED.
      */
     #if nape_swc@:isVar #end
-    public var inertia(get_inertia,set_inertia):Float;
+    public var inertia(get,set):Float;
     inline function get_inertia():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no inertia";
@@ -1903,7 +1903,7 @@ class Body extends Interactor{
      * This Vec2 is immutable.
      */
     #if nape_swc@:isVar #end
-    public var localCOM(get_localCOM,never):Vec2;
+    public var localCOM(get,never):Vec2;
     inline function get_localCOM():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no "+"localCOM";
@@ -1925,7 +1925,7 @@ class Body extends Interactor{
      * This Vec2 is immutable.
      */
     #if nape_swc@:isVar #end
-    public var worldCOM(get_worldCOM,never):Vec2;
+    public var worldCOM(get,never):Vec2;
     inline function get_worldCOM():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.world)throw "Error: Space::world has no "+"worldCOM";

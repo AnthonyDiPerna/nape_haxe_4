@@ -185,7 +185,7 @@ class Contact{
      * Reference to the CollisionArbiter this contact belongs to
      */
     #if nape_swc@:isVar #end
-    public var arbiter(get_arbiter,never):CollisionArbiter;
+    public var arbiter(get,never):CollisionArbiter;
     inline function get_arbiter():CollisionArbiter{
         return if(zpp_inner.arbiter==null)null else zpp_inner.arbiter.outer.collisionArbiter;
     }
@@ -197,7 +197,7 @@ class Contact{
      * took place (correct at time of pre-listeners).
      */
     #if nape_swc@:isVar #end
-    public var penetration(get_penetration,never):Float;
+    public var penetration(get,never):Float;
     inline function get_penetration():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Contact not currently in use";
@@ -212,7 +212,7 @@ class Contact{
      * took place (correct at time of pre-listeners).
      */
     #if nape_swc@:isVar #end
-    public var position(get_position,never):Vec2;
+    public var position(get,never):Vec2;
     inline function get_position():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Contact not currently in use";
@@ -224,7 +224,7 @@ class Contact{
      * Whether this contact is newly generated, or persistant from previous step.
      */
     #if nape_swc@:isVar #end
-    public var fresh(get_fresh,never):Bool;
+    public var fresh(get,never):Bool;
     inline function get_fresh():Bool{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Contact not currently in use";
@@ -382,7 +382,7 @@ class Contact{
      * the arbiter to have the same static and dynamic friction in the PreListener.
      */
     #if nape_swc@:isVar #end
-    public var friction(get_friction,never):Float;
+    public var friction(get,never):Float;
     inline function get_friction():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Contact not currently in use";

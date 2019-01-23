@@ -181,7 +181,7 @@ class FluidArbiter extends Arbiter{
      * This value can be modified during a related PreListener handler.
      */
     #if nape_swc@:isVar #end
-    public var position(get_position,set_position):Vec2;
+    public var position(get,set):Vec2;
     inline function get_position():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -210,7 +210,7 @@ class FluidArbiter extends Arbiter{
      * This value can be modified during a related PreListener handler.
      */
     #if nape_swc@:isVar #end
-    public var overlap(get_overlap,set_overlap):Float;
+    public var overlap(get,set):Float;
     inline function get_overlap():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";

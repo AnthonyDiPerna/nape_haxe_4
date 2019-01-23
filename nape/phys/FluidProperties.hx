@@ -191,7 +191,7 @@ class FluidProperties{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -206,7 +206,7 @@ class FluidProperties{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var shapes(get_shapes,never):ShapeList;
+    public var shapes(get,never):ShapeList;
     inline function get_shapes():ShapeList{
         if(zpp_inner.wrap_shapes==null)zpp_inner.wrap_shapes=ZPP_ShapeList.get(zpp_inner.shapes,true);
         return zpp_inner.wrap_shapes;
@@ -264,7 +264,7 @@ class FluidProperties{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var density(get_density,set_density):Float;
+    public var density(get,set):Float;
     inline function get_density():Float{
         return zpp_inner.density*("density"=="density"?1000:1);
     }
@@ -289,7 +289,7 @@ class FluidProperties{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var viscosity(get_viscosity,set_viscosity):Float;
+    public var viscosity(get,set):Float;
     inline function get_viscosity():Float{
         return zpp_inner.viscosity*("viscosity"=="density"?1000:1);
     }
@@ -313,7 +313,7 @@ class FluidProperties{
      * when performing buoyancy computations.
      */
     #if nape_swc@:isVar #end
-    public var gravity(get_gravity,set_gravity):Null<Vec2>;
+    public var gravity(get,set):Null<Vec2>;
     inline function get_gravity():Null<Vec2>{
         return zpp_inner.wrap_gravity;
     }

@@ -199,7 +199,7 @@ class MassMode{
      * Mass will be computed based on Body's Shape's areas and densities.
      */
     #if nape_swc@:isVar #end
-    public static var DEFAULT(get_DEFAULT,never):MassMode;
+    public static var DEFAULT(get,never):MassMode;
     inline static function get_DEFAULT(){
         if(ZPP_Flags.MassMode_DEFAULT==null){
             ZPP_Flags.internal=true;
@@ -214,7 +214,7 @@ class MassMode{
      * Mass set by user.
      */
     #if nape_swc@:isVar #end
-    public static var FIXED(get_FIXED,never):MassMode;
+    public static var FIXED(get,never):MassMode;
     inline static function get_FIXED(){
         if(ZPP_Flags.MassMode_FIXED==null){
             ZPP_Flags.internal=true;

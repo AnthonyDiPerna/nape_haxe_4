@@ -190,7 +190,7 @@ class BodyListener extends Listener{
      * event occurs.
      */
     #if nape_swc@:isVar #end
-    public var options(get_options,set_options):OptionType;
+    public var options(get,set):OptionType;
     inline function get_options():OptionType{
         return zpp_inner_zn.options.outer;
     }
@@ -204,7 +204,7 @@ class BodyListener extends Listener{
      * The callback handler for this listener.
      */
     #if nape_swc@:isVar #end
-    public var handler(get_handler,set_handler):BodyCallback->Void;
+    public var handler(get,set):BodyCallback->Void;
     inline function get_handler():BodyCallback->Void{
         return zpp_inner_zn.handler;
     }

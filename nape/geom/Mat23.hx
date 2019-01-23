@@ -200,7 +200,7 @@ class Mat23{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var a(get_a,set_a):Float;
+    public var a(get,set):Float;
     inline function get_a():Float{
         return zpp_inner.a;
     }
@@ -227,7 +227,7 @@ class Mat23{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var b(get_b,set_b):Float;
+    public var b(get,set):Float;
     inline function get_b():Float{
         return zpp_inner.b;
     }
@@ -254,7 +254,7 @@ class Mat23{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var c(get_c,set_c):Float;
+    public var c(get,set):Float;
     inline function get_c():Float{
         return zpp_inner.c;
     }
@@ -281,7 +281,7 @@ class Mat23{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var d(get_d,set_d):Float;
+    public var d(get,set):Float;
     inline function get_d():Float{
         return zpp_inner.d;
     }
@@ -308,7 +308,7 @@ class Mat23{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var tx(get_tx,set_tx):Float;
+    public var tx(get,set):Float;
     inline function get_tx():Float{
         return zpp_inner.tx;
     }
@@ -335,7 +335,7 @@ class Mat23{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var ty(get_ty,set_ty):Float;
+    public var ty(get,set):Float;
     inline function get_ty():Float{
         return zpp_inner.ty;
     }
@@ -543,7 +543,7 @@ class Mat23{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var determinant(get_determinant,never):Float;
+    public var determinant(get,never):Float;
     inline function get_determinant():Float{
         return(a*d)-(b*c);
     }

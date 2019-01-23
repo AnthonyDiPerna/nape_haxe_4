@@ -199,7 +199,7 @@ class InertiaMode{
      * Moment of inertia will be computed based on Body's Shape's inertias and densities.
      */
     #if nape_swc@:isVar #end
-    public static var DEFAULT(get_DEFAULT,never):InertiaMode;
+    public static var DEFAULT(get,never):InertiaMode;
     inline static function get_DEFAULT(){
         if(ZPP_Flags.InertiaMode_DEFAULT==null){
             ZPP_Flags.internal=true;
@@ -214,7 +214,7 @@ class InertiaMode{
      * Moment of inertia set by user.
      */
     #if nape_swc@:isVar #end
-    public static var FIXED(get_FIXED,never):InertiaMode;
+    public static var FIXED(get,never):InertiaMode;
     inline static function get_FIXED(){
         if(ZPP_Flags.InertiaMode_FIXED==null){
             ZPP_Flags.internal=true;

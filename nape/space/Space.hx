@@ -191,7 +191,7 @@ class Space{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -205,7 +205,7 @@ class Space{
      * @default (0,0)
      */
     #if nape_swc@:isVar #end
-    public var gravity(get_gravity,set_gravity):Vec2;
+    public var gravity(get,set):Vec2;
     inline function get_gravity():Vec2{
         if(zpp_inner.wrap_gravity==null)zpp_inner.getgravity();
         return zpp_inner.wrap_gravity;
@@ -228,7 +228,7 @@ class Space{
      * Broadphase type in use.
      */
     #if nape_swc@:isVar #end
-    public var broadphase(get_broadphase,never):Broadphase;
+    public var broadphase(get,never):Broadphase;
     inline function get_broadphase():Broadphase{
         return zpp_inner.bphase.is_sweep?Broadphase.SWEEP_AND_PRUNE:Broadphase.DYNAMIC_AABB_TREE;
     }
@@ -249,7 +249,7 @@ class Space{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var sortContacts(get_sortContacts,set_sortContacts):Bool;
+    public var sortContacts(get,set):Bool;
     inline function get_sortContacts():Bool{
         return zpp_inner.sortcontacts;
     }
@@ -268,7 +268,7 @@ class Space{
      * @default 0.015
      */
     #if nape_swc@:isVar #end
-    public var worldAngularDrag(get_worldAngularDrag,set_worldAngularDrag):Float;
+    public var worldAngularDrag(get,set):Float;
     inline function get_worldAngularDrag():Float{
         return zpp_inner.global_ang_drag;
     }
@@ -291,7 +291,7 @@ class Space{
      * @default 0.015
      */
     #if nape_swc@:isVar #end
-    public var worldLinearDrag(get_worldLinearDrag,set_worldLinearDrag):Float;
+    public var worldLinearDrag(get,set):Float;
     inline function get_worldLinearDrag():Float{
         return zpp_inner.global_lin_drag;
     }
@@ -315,7 +315,7 @@ class Space{
      * compound that is a child of another compound will not be in this list.
      */
     #if nape_swc@:isVar #end
-    public var compounds(get_compounds,never):CompoundList;
+    public var compounds(get,never):CompoundList;
     inline function get_compounds():CompoundList{
         return zpp_inner.wrap_compounds;
     }
@@ -329,7 +329,7 @@ class Space{
      * body that is a child of a Compound will not be in this list.
      */
     #if nape_swc@:isVar #end
-    public var bodies(get_bodies,never):BodyList;
+    public var bodies(get,never):BodyList;
     inline function get_bodies():BodyList{
         return zpp_inner.wrap_bodies;
     }
@@ -341,7 +341,7 @@ class Space{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var liveBodies(get_liveBodies,never):BodyList;
+    public var liveBodies(get,never):BodyList;
     inline function get_liveBodies():BodyList{
         return zpp_inner.wrap_live;
     }
@@ -355,7 +355,7 @@ class Space{
      * constraint that is a child of a Compound will not be in this list.
      */
     #if nape_swc@:isVar #end
-    public var constraints(get_constraints,never):ConstraintList;
+    public var constraints(get,never):ConstraintList;
     inline function get_constraints():ConstraintList{
         return zpp_inner.wrap_constraints;
     }
@@ -367,7 +367,7 @@ class Space{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var liveConstraints(get_liveConstraints,never):ConstraintList;
+    public var liveConstraints(get,never):ConstraintList;
     inline function get_liveConstraints():ConstraintList{
         return zpp_inner.wrap_livecon;
     }
@@ -432,7 +432,7 @@ class Space{
      * against a static point in space.
      */
     #if nape_swc@:isVar #end
-    public var world(get_world,never):Body;
+    public var world(get,never):Body;
     inline function get_world():Body{
         return zpp_inner.__static;
     }
@@ -442,7 +442,7 @@ class Space{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var arbiters(get_arbiters,never):ArbiterList;
+    public var arbiters(get,never):ArbiterList;
     inline function get_arbiters():ArbiterList{
         if(zpp_inner.wrap_arbiters==null){
             var ret=new ZPP_SpaceArbiterList();
@@ -458,7 +458,7 @@ class Space{
      * adding a Listener to this Space equivalent to: <code>listener.space = space</code>
      */
     #if nape_swc@:isVar #end
-    public var listeners(get_listeners,never):ListenerList;
+    public var listeners(get,never):ListenerList;
     inline function get_listeners():ListenerList{
         return zpp_inner.wrap_listeners;
     }
@@ -513,7 +513,7 @@ class Space{
      * This is equal to the number of times that space.step(..) has been invoked.
      */
     #if nape_swc@:isVar #end
-    public var timeStamp(get_timeStamp,never):Int;
+    public var timeStamp(get,never):Int;
     inline function get_timeStamp():Int{
         return zpp_inner.stamp;
     }
@@ -523,7 +523,7 @@ class Space{
      * This is the total amount of 'time' that has elapsed in the Space simulation.
      */
     #if nape_swc@:isVar #end
-    public var elapsedTime(get_elapsedTime,never):Float;
+    public var elapsedTime(get,never):Float;
     inline function get_elapsedTime():Float{
         return zpp_inner.time;
     }

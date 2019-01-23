@@ -519,7 +519,7 @@ class Vec2{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var x(get_x,set_x):Float;
+    public var x(get,set):Float;
     inline function get_x():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -555,7 +555,7 @@ class Vec2{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var y(get_y,set_y):Float;
+    public var y(get,set):Float;
     inline function get_y():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -595,7 +595,7 @@ class Vec2{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var length(get_length,set_length):Float;
+    public var length(get,set):Float;
     inline function get_length():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -857,7 +857,7 @@ class Vec2{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var angle(get_angle,set_angle):Float;
+    public var angle(get,set):Float;
     inline function get_angle():Float{
         {
             #if(!NAPE_RELEASE_BUILD)

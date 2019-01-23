@@ -200,7 +200,7 @@ class GravMassMode{
      * Mass seen by gravity equal to the Body mass.
      */
     #if nape_swc@:isVar #end
-    public static var DEFAULT(get_DEFAULT,never):GravMassMode;
+    public static var DEFAULT(get,never):GravMassMode;
     inline static function get_DEFAULT(){
         if(ZPP_Flags.GravMassMode_DEFAULT==null){
             ZPP_Flags.internal=true;
@@ -215,7 +215,7 @@ class GravMassMode{
      * Mass seen by gravity set by user.
      */
     #if nape_swc@:isVar #end
-    public static var FIXED(get_FIXED,never):GravMassMode;
+    public static var FIXED(get,never):GravMassMode;
     inline static function get_FIXED(){
         if(ZPP_Flags.GravMassMode_FIXED==null){
             ZPP_Flags.internal=true;
@@ -231,7 +231,7 @@ class GravMassMode{
      * scaling factor set by user.
      */
     #if nape_swc@:isVar #end
-    public static var SCALED(get_SCALED,never):GravMassMode;
+    public static var SCALED(get,never):GravMassMode;
     inline static function get_SCALED(){
         if(ZPP_Flags.GravMassMode_SCALED==null){
             ZPP_Flags.internal=true;

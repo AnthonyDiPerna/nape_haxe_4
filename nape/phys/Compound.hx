@@ -206,7 +206,7 @@ class Compound extends Interactor{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var bodies(get_bodies,never):BodyList;
+    public var bodies(get,never):BodyList;
     inline function get_bodies():BodyList{
         return zpp_inner.wrap_bodies;
     }
@@ -218,7 +218,7 @@ class Compound extends Interactor{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var constraints(get_constraints,never):ConstraintList;
+    public var constraints(get,never):ConstraintList;
     inline function get_constraints():ConstraintList{
         return zpp_inner.wrap_constraints;
     }
@@ -230,7 +230,7 @@ class Compound extends Interactor{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var compounds(get_compounds,never):CompoundList;
+    public var compounds(get,never):CompoundList;
     inline function get_compounds():CompoundList{
         return zpp_inner.wrap_compounds;
     }
@@ -240,7 +240,7 @@ class Compound extends Interactor{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var compound(get_compound,set_compound):Null<Compound>;
+    public var compound(get,set):Null<Compound>;
     inline function get_compound():Null<Compound>{
         return if(zpp_inner.compound==null)null else zpp_inner.compound.outer;
     }
@@ -262,7 +262,7 @@ class Compound extends Interactor{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var space(get_space,set_space):Null<Space>;
+    public var space(get,set):Null<Space>;
     inline function get_space():Null<Space>{
         return if(zpp_inner.space==null)null else zpp_inner.space.outer;
     }

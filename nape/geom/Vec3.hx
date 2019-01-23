@@ -221,7 +221,7 @@ class Vec3{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var x(get_x,set_x):Float;
+    public var x(get,set):Float;
     inline function get_x():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -252,7 +252,7 @@ class Vec3{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var y(get_y,set_y):Float;
+    public var y(get,set):Float;
     inline function get_y():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -283,7 +283,7 @@ class Vec3{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var z(get_z,set_z):Float;
+    public var z(get,set):Float;
     inline function get_z():Float{
         {
             #if(!NAPE_RELEASE_BUILD)
@@ -453,7 +453,7 @@ class Vec3{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var length(get_length,set_length):Float;
+    public var length(get,set):Float;
     inline function get_length():Float{
         {
             #if(!NAPE_RELEASE_BUILD)

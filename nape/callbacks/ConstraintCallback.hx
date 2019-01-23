@@ -188,7 +188,7 @@ class ConstraintCallback extends Callback{
      * Constraint involved in callback event.
      */
     #if nape_swc@:isVar #end
-    public var constraint(get_constraint,never):Constraint;
+    public var constraint(get,never):Constraint;
     inline function get_constraint():Constraint{
         return zpp_inner.constraint.outer;
     }

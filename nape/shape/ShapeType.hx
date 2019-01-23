@@ -197,7 +197,7 @@ class ShapeType{
      * Circle shape type
      */
     #if nape_swc@:isVar #end
-    public static var CIRCLE(get_CIRCLE,never):ShapeType;
+    public static var CIRCLE(get,never):ShapeType;
     inline static function get_CIRCLE(){
         if(ZPP_Flags.ShapeType_CIRCLE==null){
             ZPP_Flags.internal=true;
@@ -210,7 +210,7 @@ class ShapeType{
      * Polygon shape type
      */
     #if nape_swc@:isVar #end
-    public static var POLYGON(get_POLYGON,never):ShapeType;
+    public static var POLYGON(get,never):ShapeType;
     inline static function get_POLYGON(){
         if(ZPP_Flags.ShapeType_POLYGON==null){
             ZPP_Flags.internal=true;

@@ -240,7 +240,7 @@ class BodyList{
      * Length of list.
      */
     #if nape_swc@:isVar #end
-    public var length(get_length,never):Int;
+    public var length(get,never):Int;
     #if true inline function get_length(){
         zpp_inner.valmod();
         if(zpp_inner.zip_length){

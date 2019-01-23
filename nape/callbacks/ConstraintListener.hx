@@ -190,7 +190,7 @@ class ConstraintListener extends Listener{
      * event occurs.
      */
     #if nape_swc@:isVar #end
-    public var options(get_options,set_options):OptionType;
+    public var options(get,set):OptionType;
     inline function get_options():OptionType{
         return zpp_inner_zn.options.outer;
     }
@@ -204,7 +204,7 @@ class ConstraintListener extends Listener{
      * The callback handler for this event.
      */
     #if nape_swc@:isVar #end
-    public var handler(get_handler,set_handler):ConstraintCallback->Void;
+    public var handler(get,set):ConstraintCallback->Void;
     inline function get_handler():ConstraintCallback->Void{
         return zpp_inner_zn.handler;
     }

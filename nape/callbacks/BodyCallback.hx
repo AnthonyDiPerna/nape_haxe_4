@@ -188,7 +188,7 @@ class BodyCallback extends Callback{
      * Body involved in callback event.
      */
     #if nape_swc@:isVar #end
-    public var body(get_body,never):Body;
+    public var body(get,never):Body;
     inline function get_body():Body{
         return zpp_inner.body.outer;
     }

@@ -209,7 +209,7 @@ class Winding{
      * is either clockwise or anticlockwise.
      */
     #if nape_swc@:isVar #end
-    public static var UNDEFINED(get_UNDEFINED,never):Winding;
+    public static var UNDEFINED(get,never):Winding;
     inline static function get_UNDEFINED(){
         if(ZPP_Flags.Winding_UNDEFINED==null){
             ZPP_Flags.internal=true;
@@ -222,7 +222,7 @@ class Winding{
      * Value represents that the polygon is wound clockwise.
      */
     #if nape_swc@:isVar #end
-    public static var CLOCKWISE(get_CLOCKWISE,never):Winding;
+    public static var CLOCKWISE(get,never):Winding;
     inline static function get_CLOCKWISE(){
         if(ZPP_Flags.Winding_CLOCKWISE==null){
             ZPP_Flags.internal=true;
@@ -235,7 +235,7 @@ class Winding{
      * Value represents that the polygon is wound anticlockwise.
      */
     #if nape_swc@:isVar #end
-    public static var ANTICLOCKWISE(get_ANTICLOCKWISE,never):Winding;
+    public static var ANTICLOCKWISE(get,never):Winding;
     inline static function get_ANTICLOCKWISE(){
         if(ZPP_Flags.Winding_ANTICLOCKWISE==null){
             ZPP_Flags.internal=true;

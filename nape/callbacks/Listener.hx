@@ -183,7 +183,7 @@ class Listener{
      * The sub-type of this listener.
      */
     #if nape_swc@:isVar #end
-    public var type(get_type,never):ListenerType;
+    public var type(get,never):ListenerType;
     inline function get_type():ListenerType{
         return ZPP_Listener.types[zpp_inner.type];
     }
@@ -191,7 +191,7 @@ class Listener{
      * The CbEvent this listener responds to.
      */
     #if nape_swc@:isVar #end
-    public var event(get_event,set_event):CbEvent;
+    public var event(get,set):CbEvent;
     inline function get_event():CbEvent{
         return ZPP_Listener.events[zpp_inner.event];
     }
@@ -218,7 +218,7 @@ class Listener{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var precedence(get_precedence,set_precedence):Int;
+    public var precedence(get,set):Int;
     inline function get_precedence():Int{
         return zpp_inner.precedence;
     }
@@ -250,7 +250,7 @@ class Listener{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var space(get_space,set_space):Null<Space>;
+    public var space(get,set):Null<Space>;
     inline function get_space():Null<Space>{
         return if(zpp_inner.space==null)null else zpp_inner.space.outer;
     }

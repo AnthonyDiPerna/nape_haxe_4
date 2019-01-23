@@ -200,7 +200,7 @@ class PreFlag{
      * Value denotes interaction will occur, and Nape will not ask again.
      */
     #if nape_swc@:isVar #end
-    public static var ACCEPT(get_ACCEPT,never):PreFlag;
+    public static var ACCEPT(get,never):PreFlag;
     inline static function get_ACCEPT(){
         if(ZPP_Flags.PreFlag_ACCEPT==null){
             ZPP_Flags.internal=true;
@@ -213,7 +213,7 @@ class PreFlag{
      * Value denotes interaction will be ignored, and Nape will not ask again.
      */
     #if nape_swc@:isVar #end
-    public static var IGNORE(get_IGNORE,never):PreFlag;
+    public static var IGNORE(get,never):PreFlag;
     inline static function get_IGNORE(){
         if(ZPP_Flags.PreFlag_IGNORE==null){
             ZPP_Flags.internal=true;
@@ -227,7 +227,7 @@ class PreFlag{
      * to do again in the following step if interaction is still possible.
      */
     #if nape_swc@:isVar #end
-    public static var ACCEPT_ONCE(get_ACCEPT_ONCE,never):PreFlag;
+    public static var ACCEPT_ONCE(get,never):PreFlag;
     inline static function get_ACCEPT_ONCE(){
         if(ZPP_Flags.PreFlag_ACCEPT_ONCE==null){
             ZPP_Flags.internal=true;
@@ -241,7 +241,7 @@ class PreFlag{
      * to do again in the following step if interaction is still possible.
      */
     #if nape_swc@:isVar #end
-    public static var IGNORE_ONCE(get_IGNORE_ONCE,never):PreFlag;
+    public static var IGNORE_ONCE(get,never):PreFlag;
     inline static function get_IGNORE_ONCE(){
         if(ZPP_Flags.PreFlag_IGNORE_ONCE==null){
             ZPP_Flags.internal=true;

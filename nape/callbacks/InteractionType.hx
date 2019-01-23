@@ -199,7 +199,7 @@ class InteractionType{
      * Collision interaction type.
      */
     #if nape_swc@:isVar #end
-    public static var COLLISION(get_COLLISION,never):InteractionType;
+    public static var COLLISION(get,never):InteractionType;
     inline static function get_COLLISION(){
         if(ZPP_Flags.InteractionType_COLLISION==null){
             ZPP_Flags.internal=true;
@@ -211,7 +211,7 @@ class InteractionType{
     /**
      * Sensor interaction type.
     ""*/#if nape_swc@:isVar #end
-    public static var SENSOR(get_SENSOR,never):InteractionType;
+    public static var SENSOR(get,never):InteractionType;
     inline static function get_SENSOR(){
         if(ZPP_Flags.InteractionType_SENSOR==null){
             ZPP_Flags.internal=true;
@@ -224,7 +224,7 @@ class InteractionType{
      * Fluid interaction type.
      */
     #if nape_swc@:isVar #end
-    public static var FLUID(get_FLUID,never):InteractionType;
+    public static var FLUID(get,never):InteractionType;
     inline static function get_FLUID(){
         if(ZPP_Flags.InteractionType_FLUID==null){
             ZPP_Flags.internal=true;
@@ -237,7 +237,7 @@ class InteractionType{
      * Special enum corresponding to 'all' interaction types.
      */
     #if nape_swc@:isVar #end
-    public static var ANY(get_ANY,never):InteractionType;
+    public static var ANY(get,never):InteractionType;
     inline static function get_ANY(){
         if(ZPP_Flags.InteractionType_ANY==null){
             ZPP_Flags.internal=true;

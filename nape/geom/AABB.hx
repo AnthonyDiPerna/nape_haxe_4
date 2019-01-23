@@ -276,7 +276,7 @@ class AABB{
      * @default (0, 0)
      */
     #if nape_swc@:isVar #end
-    public var min(get_min,set_min):Vec2;
+    public var min(get,set):Vec2;
     inline function get_min():Vec2{
         return zpp_inner.getmin();
     }
@@ -325,7 +325,7 @@ class AABB{
      * @default (0, 0)
      */
     #if nape_swc@:isVar #end
-    public var max(get_max,set_max):Vec2;
+    public var max(get,set):Vec2;
     inline function get_max():Vec2{
         return zpp_inner.getmax();
     }
@@ -366,7 +366,7 @@ class AABB{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var x(get_x,set_x):Float;
+    public var x(get,set):Float;
     inline function get_x():Float{
         zpp_inner.validate();
         return zpp_inner.minx;
@@ -396,7 +396,7 @@ class AABB{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var y(get_y,set_y):Float;
+    public var y(get,set):Float;
     inline function get_y():Float{
         zpp_inner.validate();
         return zpp_inner.miny;
@@ -426,7 +426,7 @@ class AABB{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var width(get_width,set_width):Float;
+    public var width(get,set):Float;
     inline function get_width():Float{
         zpp_inner.validate();
         return zpp_inner.width();
@@ -460,7 +460,7 @@ class AABB{
      * @default 0
      */
     #if nape_swc@:isVar #end
-    public var height(get_height,set_height):Float;
+    public var height(get,set):Float;
     inline function get_height():Float{
         zpp_inner.validate();
         return zpp_inner.height();

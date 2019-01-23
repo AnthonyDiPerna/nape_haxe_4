@@ -191,7 +191,7 @@ class InteractionCallback extends Callback{
      * OptionType in InteractionListener
      */
     #if nape_swc@:isVar #end
-    public var int1(get_int1,never):Interactor;
+    public var int1(get,never):Interactor;
     inline function get_int1():Interactor{
         return zpp_inner.int1.outer_i;
     }
@@ -202,7 +202,7 @@ class InteractionCallback extends Callback{
      * OptionType in InteractionListener
      */
     #if nape_swc@:isVar #end
-    public var int2(get_int2,never):Interactor;
+    public var int2(get,never):Interactor;
     inline function get_int2():Interactor{
         return zpp_inner.int2.outer_i;
     }
@@ -213,7 +213,7 @@ class InteractionCallback extends Callback{
      * interactionType in the InteractionListener. (This may be subject to change).
      */
     #if nape_swc@:isVar #end
-    public var arbiters(get_arbiters,never):ArbiterList;
+    public var arbiters(get,never):ArbiterList;
     inline function get_arbiters():ArbiterList{
         return zpp_inner.wrap_arbiters;
     }

@@ -220,7 +220,7 @@ class InteractionFilter{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -235,7 +235,7 @@ class InteractionFilter{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var shapes(get_shapes,never):ShapeList;
+    public var shapes(get,never):ShapeList;
     inline function get_shapes():ShapeList{
         if(zpp_inner.wrap_shapes==null)zpp_inner.wrap_shapes=ZPP_ShapeList.get(zpp_inner.shapes,true);
         return zpp_inner.wrap_shapes;
@@ -245,7 +245,7 @@ class InteractionFilter{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var collisionGroup(get_collisionGroup,set_collisionGroup):Int;
+    public var collisionGroup(get,set):Int;
     inline function get_collisionGroup():Int{
         return zpp_inner.collisionGroup;
     }
@@ -263,7 +263,7 @@ class InteractionFilter{
      * @default -1 (all bits set)
      */
     #if nape_swc@:isVar #end
-    public var collisionMask(get_collisionMask,set_collisionMask):Int;
+    public var collisionMask(get,set):Int;
     inline function get_collisionMask():Int{
         return zpp_inner.collisionMask;
     }
@@ -281,7 +281,7 @@ class InteractionFilter{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var sensorGroup(get_sensorGroup,set_sensorGroup):Int;
+    public var sensorGroup(get,set):Int;
     inline function get_sensorGroup():Int{
         return zpp_inner.sensorGroup;
     }
@@ -299,7 +299,7 @@ class InteractionFilter{
      * @default -1 (all bits set)
      */
     #if nape_swc@:isVar #end
-    public var sensorMask(get_sensorMask,set_sensorMask):Int;
+    public var sensorMask(get,set):Int;
     inline function get_sensorMask():Int{
         return zpp_inner.sensorMask;
     }
@@ -317,7 +317,7 @@ class InteractionFilter{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var fluidGroup(get_fluidGroup,set_fluidGroup):Int;
+    public var fluidGroup(get,set):Int;
     inline function get_fluidGroup():Int{
         return zpp_inner.fluidGroup;
     }
@@ -335,7 +335,7 @@ class InteractionFilter{
      * @default -1 (all bits set)
      */
     #if nape_swc@:isVar #end
-    public var fluidMask(get_fluidMask,set_fluidMask):Int;
+    public var fluidMask(get,set):Int;
     inline function get_fluidMask():Int{
         return zpp_inner.fluidMask;
     }

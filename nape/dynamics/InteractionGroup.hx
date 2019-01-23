@@ -225,7 +225,7 @@ class InteractionGroup{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var group(get_group,set_group):Null<InteractionGroup>;
+    public var group(get,set):Null<InteractionGroup>;
     inline function get_group():Null<InteractionGroup>{
         return if(zpp_inner.group==null)null else zpp_inner.group.outer;
     }
@@ -243,7 +243,7 @@ class InteractionGroup{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var ignore(get_ignore,set_ignore):Bool;
+    public var ignore(get,set):Bool;
     inline function get_ignore():Bool{
         return zpp_inner.ignore;
     }
@@ -264,7 +264,7 @@ class InteractionGroup{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var interactors(get_interactors,never):InteractorList;
+    public var interactors(get,never):InteractorList;
     inline function get_interactors():InteractorList{
         if(zpp_inner.wrap_interactors==null)zpp_inner.wrap_interactors=ZPP_InteractorList.get(zpp_inner.interactors,true);
         return zpp_inner.wrap_interactors;
@@ -278,7 +278,7 @@ class InteractionGroup{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var groups(get_groups,never):InteractionGroupList;
+    public var groups(get,never):InteractionGroupList;
     inline function get_groups():InteractionGroupList{
         if(zpp_inner.wrap_groups==null)zpp_inner.wrap_groups=ZPP_InteractionGroupList.get(zpp_inner.groups,true);
         return zpp_inner.wrap_groups;

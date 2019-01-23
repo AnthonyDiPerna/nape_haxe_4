@@ -179,7 +179,7 @@ class CollisionArbiter extends Arbiter{
      * Set of contact points for the related pairs of shapes.
      */
     #if nape_swc@:isVar #end
-    public var contacts(get_contacts,never):ContactList;
+    public var contacts(get,never):ContactList;
     inline function get_contacts():ContactList{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -195,7 +195,7 @@ class CollisionArbiter extends Arbiter{
      * and erorr resolvement took place (Correct at time of pre-listener).
      */
     #if nape_swc@:isVar #end
-    public var normal(get_normal,never):Vec2;
+    public var normal(get,never):Vec2;
     inline function get_normal():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -209,7 +209,7 @@ class CollisionArbiter extends Arbiter{
      * between the Shapes.
      */
     #if nape_swc@:isVar #end
-    public var radius(get_radius,never):Float;
+    public var radius(get,never):Float;
     inline function get_radius():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -221,7 +221,7 @@ class CollisionArbiter extends Arbiter{
      * If the first shape in Arbiter is a Circle this value is null.
      */
     #if nape_swc@:isVar #end
-    public var referenceEdge1(get_referenceEdge1,never):Null<Edge>;
+    public var referenceEdge1(get,never):Null<Edge>;
     inline function get_referenceEdge1():Null<Edge>{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -235,7 +235,7 @@ class CollisionArbiter extends Arbiter{
      * If the second shape in Arbiter is a Circle this value is null.
      */
     #if nape_swc@:isVar #end
-    public var referenceEdge2(get_referenceEdge2,never):Null<Edge>;
+    public var referenceEdge2(get,never):Null<Edge>;
     inline function get_referenceEdge2():Null<Edge>{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -592,7 +592,7 @@ class CollisionArbiter extends Arbiter{
      * to 1.
      */
     #if nape_swc@:isVar #end
-    public var elasticity(get_elasticity,set_elasticity):Float;
+    public var elasticity(get,set):Float;
     inline function get_elasticity():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -627,7 +627,7 @@ class CollisionArbiter extends Arbiter{
      * will no longer be under Nape's control. Values must not be negative.
      */
     #if nape_swc@:isVar #end
-    public var dynamicFriction(get_dynamicFriction,set_dynamicFriction):Float;
+    public var dynamicFriction(get,set):Float;
     inline function get_dynamicFriction():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -662,7 +662,7 @@ class CollisionArbiter extends Arbiter{
      * will no longer be under Nape's control. Values must not be negative.
      */
     #if nape_swc@:isVar #end
-    public var staticFriction(get_staticFriction,set_staticFriction):Float;
+    public var staticFriction(get,set):Float;
     inline function get_staticFriction():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -697,7 +697,7 @@ class CollisionArbiter extends Arbiter{
      * will no longer be under Nape's control. Values must not be negative.
      */
     #if nape_swc@:isVar #end
-    public var rollingFriction(get_rollingFriction,set_rollingFriction):Float;
+    public var rollingFriction(get,set):Float;
     inline function get_rollingFriction():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";

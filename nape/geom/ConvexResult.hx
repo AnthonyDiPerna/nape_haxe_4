@@ -186,7 +186,7 @@ class ConvexResult{
      * The normal of the surface at collision.
      */
     #if nape_swc@:isVar #end
-    public var normal(get_normal,never):Vec2;
+    public var normal(get,never):Vec2;
     inline function get_normal():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -197,7 +197,7 @@ class ConvexResult{
      * The position of the collision.
      */
     #if nape_swc@:isVar #end
-    public var position(get_position,never):Vec2;
+    public var position(get,never):Vec2;
     inline function get_position():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -208,7 +208,7 @@ class ConvexResult{
      * The time of impact to the collision
      */
     #if nape_swc@:isVar #end
-    public var toi(get_toi,never):Float;
+    public var toi(get,never):Float;
     inline function get_toi():Float{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -219,7 +219,7 @@ class ConvexResult{
      * The shape which was collided against.
      */
     #if nape_swc@:isVar #end
-    public var shape(get_shape,never):Shape;
+    public var shape(get,never):Shape;
     inline function get_shape():Shape{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();

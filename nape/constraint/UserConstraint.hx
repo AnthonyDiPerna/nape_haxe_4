@@ -203,7 +203,7 @@ class UserConstraint extends Constraint{
      * <pre>
      * //Haxe (Cleanest way without using macros, clearly you must ensure this
      * //      is set at least once, likely in constructor)
-     * public var property(default, set_property):Vec2;
+     * public var property(default, set):Vec2;
      * inline function set_property(property:Vec2) {
      *     if (this.property == null) this.property = __bindVec2();
      *     return this.property.set(property);
@@ -479,7 +479,7 @@ class UserConstraint extends Constraint{
      * constraint can be created (Dealing with all necessary side-effects etc).
      * <pre>
      * //Haxe
-     * public var body1(default, set_body1):Null&lt;Body&gt;;
+     * public var body1(default, set):Null&lt;Body&gt;;
      * inline function set_body1(body1:Null&lt;Body&gt;) {
      *     return this.body1 = __registerBody(this.body1, body1);
      * }

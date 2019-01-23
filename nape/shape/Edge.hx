@@ -191,7 +191,7 @@ class Edge{
      * Reference to Polygon this Edge belongs to.
      */
     #if nape_swc@:isVar #end
-    public var polygon(get_polygon,never):Polygon;
+    public var polygon(get,never):Polygon;
     inline function get_polygon():Polygon{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -204,7 +204,7 @@ class Edge{
      * This Vec2 is immutable.
      */
     #if nape_swc@:isVar #end
-    public var localNormal(get_localNormal,never):Vec2;
+    public var localNormal(get,never):Vec2;
     inline function get_localNormal():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -220,7 +220,7 @@ class Edge{
      * build error.
      */
     #if nape_swc@:isVar #end
-    public var worldNormal(get_worldNormal,never):Vec2;
+    public var worldNormal(get,never):Vec2;
     inline function get_worldNormal():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -232,7 +232,7 @@ class Edge{
      * Length of edge.
      */
     #if nape_swc@:isVar #end
-    public var length(get_length,never):Float;
+    public var length(get,never):Float;
     inline function get_length():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -244,7 +244,7 @@ class Edge{
      * Local projection of polygon onto edge axis.
      */
     #if nape_swc@:isVar #end
-    public var localProjection(get_localProjection,never):Float;
+    public var localProjection(get,never):Float;
     inline function get_localProjection():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -258,7 +258,7 @@ class Edge{
      * This value can only be accessed if related Polygon is part of a Body.
      */
     #if nape_swc@:isVar #end
-    public var worldProjection(get_worldProjection,never):Float;
+    public var worldProjection(get,never):Float;
     inline function get_worldProjection():Float{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -271,7 +271,7 @@ class Edge{
      * Reference to first local vertex for edge.
      */
     #if nape_swc@:isVar #end
-    public var localVertex1(get_localVertex1,never):Vec2;
+    public var localVertex1(get,never):Vec2;
     inline function get_localVertex1():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -283,7 +283,7 @@ class Edge{
      * Reference to second local vertex for edge.
      */
     #if nape_swc@:isVar #end
-    public var localVertex2(get_localVertex2,never):Vec2;
+    public var localVertex2(get,never):Vec2;
     inline function get_localVertex2():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -295,7 +295,7 @@ class Edge{
      * Reference to first world vertex for edge.
      */
     #if nape_swc@:isVar #end
-    public var worldVertex1(get_worldVertex1,never):Vec2;
+    public var worldVertex1(get,never):Vec2;
     inline function get_worldVertex1():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";
@@ -307,7 +307,7 @@ class Edge{
      * Reference to second world vertex for edge.
      */
     #if nape_swc@:isVar #end
-    public var worldVertex2(get_worldVertex2,never):Vec2;
+    public var worldVertex2(get,never):Vec2;
     inline function get_worldVertex2():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.polygon==null)throw "Error: Edge not current in use";

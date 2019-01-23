@@ -206,7 +206,7 @@ class Broadphase{
      * This is the default broadphase nape will use.
      */
     #if nape_swc@:isVar #end
-    public static var DYNAMIC_AABB_TREE(get_DYNAMIC_AABB_TREE,never):Broadphase;
+    public static var DYNAMIC_AABB_TREE(get,never):Broadphase;
     inline static function get_DYNAMIC_AABB_TREE(){
         if(ZPP_Flags.Broadphase_DYNAMIC_AABB_TREE==null){
             ZPP_Flags.internal=true;
@@ -234,7 +234,7 @@ class Broadphase{
      * broadphase type.
      */
     #if nape_swc@:isVar #end
-    public static var SWEEP_AND_PRUNE(get_SWEEP_AND_PRUNE,never):Broadphase;
+    public static var SWEEP_AND_PRUNE(get,never):Broadphase;
     inline static function get_SWEEP_AND_PRUNE(){
         if(ZPP_Flags.Broadphase_SWEEP_AND_PRUNE==null){
             ZPP_Flags.internal=true;

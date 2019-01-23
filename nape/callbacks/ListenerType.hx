@@ -199,7 +199,7 @@ class ListenerType{
      * Type for BodyListeners
      */
     #if nape_swc@:isVar #end
-    public static var BODY(get_BODY,never):ListenerType;
+    public static var BODY(get,never):ListenerType;
     inline static function get_BODY(){
         if(ZPP_Flags.ListenerType_BODY==null){
             ZPP_Flags.internal=true;
@@ -212,7 +212,7 @@ class ListenerType{
      * Type for ConstraintListeners
      */
     #if nape_swc@:isVar #end
-    public static var CONSTRAINT(get_CONSTRAINT,never):ListenerType;
+    public static var CONSTRAINT(get,never):ListenerType;
     inline static function get_CONSTRAINT(){
         if(ZPP_Flags.ListenerType_CONSTRAINT==null){
             ZPP_Flags.internal=true;
@@ -225,7 +225,7 @@ class ListenerType{
      * Type for InteractionListeners
      */
     #if nape_swc@:isVar #end
-    public static var INTERACTION(get_INTERACTION,never):ListenerType;
+    public static var INTERACTION(get,never):ListenerType;
     inline static function get_INTERACTION(){
         if(ZPP_Flags.ListenerType_INTERACTION==null){
             ZPP_Flags.internal=true;
@@ -238,7 +238,7 @@ class ListenerType{
      * Type for PreListeners
      */
     #if nape_swc@:isVar #end
-    public static var PRE(get_PRE,never):ListenerType;
+    public static var PRE(get,never):ListenerType;
     inline static function get_PRE(){
         if(ZPP_Flags.ListenerType_PRE==null){
             ZPP_Flags.internal=true;

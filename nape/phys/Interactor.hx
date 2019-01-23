@@ -180,7 +180,7 @@ class Interactor{
      * Unique id of this Interactor.
      */
     #if nape_swc@:isVar #end
-    public var id(get_id,never):Int;
+    public var id(get,never):Int;
     inline function get_id():Int{
         return zpp_inner_i.id;
     }
@@ -196,7 +196,7 @@ class Interactor{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner_i.userData==null){
             zpp_inner_i.userData=cast{};
@@ -231,7 +231,7 @@ class Interactor{
      * Fast equivalent to <code>cast(interactor, Shape)</code>
      */
     #if nape_swc@:isVar #end
-    public var castShape(get_castShape,never):Null<Shape>;
+    public var castShape(get,never):Null<Shape>;
     inline function get_castShape():Null<Shape>{
         return if(isShape())zpp_inner_i.ishape.outer else null;
     }
@@ -239,7 +239,7 @@ class Interactor{
      * Fast equivalent to <code>cast(interactor, Body)</code>
      */
     #if nape_swc@:isVar #end
-    public var castBody(get_castBody,never):Null<Body>;
+    public var castBody(get,never):Null<Body>;
     inline function get_castBody():Null<Body>{
         return if(isBody())zpp_inner_i.ibody.outer else null;
     }
@@ -247,7 +247,7 @@ class Interactor{
      * Fast equivalent to <code>cast(interactor, Compound)</code>
      */
     #if nape_swc@:isVar #end
-    public var castCompound(get_castCompound,never):Null<Compound>;
+    public var castCompound(get,never):Null<Compound>;
     inline function get_castCompound():Null<Compound>{
         return if(isCompound())zpp_inner_i.icompound.outer else null;
     }
@@ -257,7 +257,7 @@ class Interactor{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var group(get_group,set_group):Null<InteractionGroup>;
+    public var group(get,set):Null<InteractionGroup>;
     inline function get_group():Null<InteractionGroup>{
         return if(zpp_inner_i.group==null)null else zpp_inner_i.group.outer;
     }
@@ -274,7 +274,7 @@ class Interactor{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var cbTypes(get_cbTypes,never):CbTypeList;
+    public var cbTypes(get,never):CbTypeList;
     inline function get_cbTypes():CbTypeList{
         if(zpp_inner_i.wrap_cbTypes==null)zpp_inner_i.setupcbTypes();
         return zpp_inner_i.wrap_cbTypes;

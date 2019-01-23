@@ -191,7 +191,7 @@ class Constraint{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -215,7 +215,7 @@ class Constraint{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var compound(get_compound,set_compound):Null<Compound>;
+    public var compound(get,set):Null<Compound>;
     inline function get_compound():Null<Compound>{
         return if(zpp_inner.compound==null)null else zpp_inner.compound.outer;
     }
@@ -244,7 +244,7 @@ class Constraint{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var space(get_space,set_space):Null<Space>;
+    public var space(get,set):Null<Space>;
     inline function get_space():Null<Space>{
         return if(zpp_inner.space==null)null else zpp_inner.space.outer;
     }
@@ -286,7 +286,7 @@ class Constraint{
      * you should make use of the nape-hacks module.
      */
     #if nape_swc@:isVar #end
-    public var isSleeping(get_isSleeping,never):Bool;
+    public var isSleeping(get,never):Bool;
     inline function get_isSleeping():Bool{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.space==null||!zpp_inner.active){
@@ -305,7 +305,7 @@ class Constraint{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var active(get_active,set_active):Bool;
+    public var active(get,set):Bool;
     inline function get_active():Bool{
         return zpp_inner.active;
     }
@@ -343,7 +343,7 @@ class Constraint{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var ignore(get_ignore,set_ignore):Bool;
+    public var ignore(get,set):Bool;
     inline function get_ignore():Bool{
         return zpp_inner.ignore;
     }
@@ -372,7 +372,7 @@ class Constraint{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var stiff(get_stiff,set_stiff):Bool;
+    public var stiff(get,set):Bool;
     inline function get_stiff():Bool{
         return zpp_inner.stiff;
     }
@@ -398,7 +398,7 @@ class Constraint{
      * @default 10
      */
     #if nape_swc@:isVar #end
-    public var frequency(get_frequency,set_frequency):Float;
+    public var frequency(get,set):Float;
     inline function get_frequency():Float{
         return zpp_inner.frequency;
     }
@@ -435,7 +435,7 @@ class Constraint{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var damping(get_damping,set_damping):Float;
+    public var damping(get,set):Float;
     inline function get_damping():Float{
         return zpp_inner.damping;
     }
@@ -471,7 +471,7 @@ class Constraint{
      * @default infinity
      */
     #if nape_swc@:isVar #end
-    public var maxForce(get_maxForce,set_maxForce):Float;
+    public var maxForce(get,set):Float;
     inline function get_maxForce():Float{
         return zpp_inner.maxForce;
     }
@@ -505,7 +505,7 @@ class Constraint{
      * @default infinity
      */
     #if nape_swc@:isVar #end
-    public var maxError(get_maxError,set_maxError):Float;
+    public var maxError(get,set):Float;
     inline function get_maxError():Float{
         return zpp_inner.maxError;
     }
@@ -536,7 +536,7 @@ class Constraint{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var breakUnderForce(get_breakUnderForce,set_breakUnderForce):Bool;
+    public var breakUnderForce(get,set):Bool;
     inline function get_breakUnderForce():Bool{
         return zpp_inner.breakUnderForce;
     }
@@ -557,7 +557,7 @@ class Constraint{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var breakUnderError(get_breakUnderError,set_breakUnderError):Bool;
+    public var breakUnderError(get,set):Bool;
     inline function get_breakUnderError():Bool{
         return zpp_inner.breakUnderError;
     }
@@ -579,7 +579,7 @@ class Constraint{
      * @default true
      */
     #if nape_swc@:isVar #end
-    public var removeOnBreak(get_removeOnBreak,set_removeOnBreak):Bool;
+    public var removeOnBreak(get,set):Bool;
     inline function get_removeOnBreak():Bool{
         return zpp_inner.removeOnBreak;
     }
@@ -628,7 +628,7 @@ class Constraint{
      * @default [CbType.ANY_CONSTRAINT]
      */
     #if nape_swc@:isVar #end
-    public var cbTypes(get_cbTypes,never):CbTypeList;
+    public var cbTypes(get,never):CbTypeList;
     inline function get_cbTypes():CbTypeList{
         if(zpp_inner.wrap_cbTypes==null){
             zpp_inner.setupcbTypes();

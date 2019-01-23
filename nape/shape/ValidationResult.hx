@@ -199,7 +199,7 @@ class ValidationResult{
      * Denotes polygon is valid for simulation in Nape.
      */
     #if nape_swc@:isVar #end
-    public static var VALID(get_VALID,never):ValidationResult;
+    public static var VALID(get,never):ValidationResult;
     inline static function get_VALID(){
         if(ZPP_Flags.ValidationResult_VALID==null){
             ZPP_Flags.internal=true;
@@ -212,7 +212,7 @@ class ValidationResult{
      * Denotes polygon is degenerate (has zero area).
      */
     #if nape_swc@:isVar #end
-    public static var DEGENERATE(get_DEGENERATE,never):ValidationResult;
+    public static var DEGENERATE(get,never):ValidationResult;
     inline static function get_DEGENERATE(){
         if(ZPP_Flags.ValidationResult_DEGENERATE==null){
             ZPP_Flags.internal=true;
@@ -225,7 +225,7 @@ class ValidationResult{
      * Denotes polygon is concave.
      */
     #if nape_swc@:isVar #end
-    public static var CONCAVE(get_CONCAVE,never):ValidationResult;
+    public static var CONCAVE(get,never):ValidationResult;
     inline static function get_CONCAVE(){
         if(ZPP_Flags.ValidationResult_CONCAVE==null){
             ZPP_Flags.internal=true;
@@ -238,7 +238,7 @@ class ValidationResult{
      * Denotes polygon is self-intersecting.
      */
     #if nape_swc@:isVar #end
-    public static var SELF_INTERSECTING(get_SELF_INTERSECTING,never):ValidationResult;
+    public static var SELF_INTERSECTING(get,never):ValidationResult;
     inline static function get_SELF_INTERSECTING(){
         if(ZPP_Flags.ValidationResult_SELF_INTERSECTING==null){
             ZPP_Flags.internal=true;

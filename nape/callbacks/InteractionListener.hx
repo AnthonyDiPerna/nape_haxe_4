@@ -213,7 +213,7 @@ class InteractionListener extends Listener{
      * The OptionType used to match against Interactors for the first object.
      */
     #if nape_swc@:isVar #end
-    public var options1(get_options1,set_options1):OptionType;
+    public var options1(get,set):OptionType;
     inline function get_options1():OptionType{
         return zpp_inner_zn.options1.outer;
     }
@@ -227,7 +227,7 @@ class InteractionListener extends Listener{
      * The OptionType used to match against Interactors for the second object.
      */
     #if nape_swc@:isVar #end
-    public var options2(get_options2,set_options2):OptionType;
+    public var options2(get,set):OptionType;
     inline function get_options2():OptionType{
         return zpp_inner_zn.options2.outer;
     }
@@ -245,7 +245,7 @@ class InteractionListener extends Listener{
      * of objects is ignored.
      */
     #if nape_swc@:isVar #end
-    public var interactionType(get_interactionType,set_interactionType):InteractionType;
+    public var interactionType(get,set):InteractionType;
     inline function get_interactionType():InteractionType{
         var ret=zpp_inner_zn.itype;
         return if(ret==ZPP_Flags.id_InteractionType_COLLISION)InteractionType.COLLISION;
@@ -272,7 +272,7 @@ class InteractionListener extends Listener{
      * The callback handler for this listener.
      */
     #if nape_swc@:isVar #end
-    public var handler(get_handler,set_handler):InteractionCallback->Void;
+    public var handler(get,set):InteractionCallback->Void;
     inline function get_handler():InteractionCallback->Void{
         return zpp_inner_zn.handleri;
     }
@@ -296,7 +296,7 @@ class InteractionListener extends Listener{
      * will permit Nape to always generate callbacks.
      */
     #if nape_swc@:isVar #end
-    public var allowSleepingCallbacks(get_allowSleepingCallbacks,set_allowSleepingCallbacks):Bool;
+    public var allowSleepingCallbacks(get,set):Bool;
     inline function get_allowSleepingCallbacks():Bool{
         return zpp_inner_zn.allowSleepingCallbacks;
     }

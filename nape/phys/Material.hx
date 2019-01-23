@@ -191,7 +191,7 @@ class Material{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -206,7 +206,7 @@ class Material{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var shapes(get_shapes,never):ShapeList;
+    public var shapes(get,never):ShapeList;
     inline function get_shapes():ShapeList{
         if(zpp_inner.wrap_shapes==null)zpp_inner.wrap_shapes=ZPP_ShapeList.get(zpp_inner.shapes,true);
         return zpp_inner.wrap_shapes;
@@ -282,7 +282,7 @@ class Material{
      * @default 0.0
      */
     #if nape_swc@:isVar #end
-    public var elasticity(get_elasticity,set_elasticity):Float;
+    public var elasticity(get,set):Float;
     inline function get_elasticity():Float{
         return zpp_inner.elasticity*("elasticity"=="density"?1000:1);
     }
@@ -312,7 +312,7 @@ class Material{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var dynamicFriction(get_dynamicFriction,set_dynamicFriction):Float;
+    public var dynamicFriction(get,set):Float;
     inline function get_dynamicFriction():Float{
         return zpp_inner.dynamicFriction*("dynamicFriction"=="density"?1000:1);
     }
@@ -342,7 +342,7 @@ class Material{
      * @default 2
      */
     #if nape_swc@:isVar #end
-    public var staticFriction(get_staticFriction,set_staticFriction):Float;
+    public var staticFriction(get,set):Float;
     inline function get_staticFriction():Float{
         return zpp_inner.staticFriction*("staticFriction"=="density"?1000:1);
     }
@@ -370,7 +370,7 @@ class Material{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var density(get_density,set_density):Float;
+    public var density(get,set):Float;
     inline function get_density():Float{
         return zpp_inner.density*("density"=="density"?1000:1);
     }
@@ -401,7 +401,7 @@ class Material{
      * @default 0.01
      */
     #if nape_swc@:isVar #end
-    public var rollingFriction(get_rollingFriction,set_rollingFriction):Float;
+    public var rollingFriction(get,set):Float;
     inline function get_rollingFriction():Float{
         return zpp_inner.rollingFriction*("rollingFriction"=="density"?1000:1);
     }

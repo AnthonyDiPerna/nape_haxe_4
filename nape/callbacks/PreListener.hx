@@ -186,7 +186,7 @@ class PreListener extends Listener{
      * The OptionType used to match against Interactors for the first object.
      */
     #if nape_swc@:isVar #end
-    public var options1(get_options1,set_options1):OptionType;
+    public var options1(get,set):OptionType;
     inline function get_options1():OptionType{
         return zpp_inner_zn.options1.outer;
     }
@@ -200,7 +200,7 @@ class PreListener extends Listener{
      * The OptionType used to match against Interactors for the second object.
      */
     #if nape_swc@:isVar #end
-    public var options2(get_options2,set_options2):OptionType;
+    public var options2(get,set):OptionType;
     inline function get_options2():OptionType{
         return zpp_inner_zn.options2.outer;
     }
@@ -235,7 +235,7 @@ class PreListener extends Listener{
      * to your word and permit the objects to sleep.
      */
     #if nape_swc@:isVar #end
-    public var handler(get_handler,set_handler):PreCallback->Null<PreFlag>;
+    public var handler(get,set):PreCallback->Null<PreFlag>;
     inline function get_handler():PreCallback->Null<PreFlag>{
         return zpp_inner_zn.handlerp;
     }
@@ -262,7 +262,7 @@ class PreListener extends Listener{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var pure(get_pure,set_pure):Bool;
+    public var pure(get,set):Bool;
     inline function get_pure():Bool{
         return zpp_inner_zn.pure;
     }
@@ -283,7 +283,7 @@ class PreListener extends Listener{
      * of objects is ignored.
      */
     #if nape_swc@:isVar #end
-    public var interactionType(get_interactionType,set_interactionType):InteractionType;
+    public var interactionType(get,set):InteractionType;
     inline function get_interactionType():InteractionType{
         var ret=zpp_inner_zn.itype;
         return if(ret==ZPP_Flags.id_InteractionType_COLLISION)InteractionType.COLLISION;

@@ -192,7 +192,7 @@ class PreCallback extends Callback{
      * interactionType
      */
     #if nape_swc@:isVar #end
-    public var arbiter(get_arbiter,never):Arbiter;
+    public var arbiter(get,never):Arbiter;
     inline function get_arbiter():Arbiter{
         return zpp_inner.pre_arbiter.wrapper();
     }
@@ -203,7 +203,7 @@ class PreCallback extends Callback{
      * OptionType in InteractionListener
      */
     #if nape_swc@:isVar #end
-    public var int1(get_int1,never):Interactor;
+    public var int1(get,never):Interactor;
     inline function get_int1():Interactor{
         return zpp_inner.int1.outer_i;
     }
@@ -214,7 +214,7 @@ class PreCallback extends Callback{
      * OptionType in InteractionListener
      */
     #if nape_swc@:isVar #end
-    public var int2(get_int2,never):Interactor;
+    public var int2(get,never):Interactor;
     inline function get_int2():Interactor{
         return zpp_inner.int2.outer_i;
     }
@@ -228,7 +228,7 @@ class PreCallback extends Callback{
      * will point from int2 towards int1 instead of from int1 towards int2.
      */
     #if nape_swc@:isVar #end
-    public var swapped(get_swapped,never):Bool;
+    public var swapped(get,never):Bool;
     inline function get_swapped():Bool{
         return zpp_inner.pre_swapped;
     }

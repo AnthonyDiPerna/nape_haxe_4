@@ -186,7 +186,7 @@ class RayResult{
      * The normal of the surface at intersection.
      */
     #if nape_swc@:isVar #end
-    public var normal(get_normal,never):Vec2;
+    public var normal(get,never):Vec2;
     inline function get_normal():Vec2{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -197,7 +197,7 @@ class RayResult{
      * The distance to the intersection.
      */
     #if nape_swc@:isVar #end
-    public var distance(get_distance,never):Float;
+    public var distance(get,never):Float;
     inline function get_distance():Float{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -208,7 +208,7 @@ class RayResult{
      * Whether this intersection is with the inner surface of an object.
      */
     #if nape_swc@:isVar #end
-    public var inner(get_inner,never):Bool;
+    public var inner(get,never):Bool;
     inline function get_inner():Bool{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();
@@ -219,7 +219,7 @@ class RayResult{
      * The shape which was intersected.
      */
     #if nape_swc@:isVar #end
-    public var shape(get_shape,never):Shape;
+    public var shape(get,never):Shape;
     inline function get_shape():Shape{
         #if(!NAPE_RELEASE_BUILD)
         zpp_inner.disposed();

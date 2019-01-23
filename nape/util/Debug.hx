@@ -1084,7 +1084,7 @@ class Debug{
      * Create a flash/openfl||nme Shape representing the given Body.
      *
      * @param body The body to create display Shape for.
-     * @return A flash/openfl||nme.display.Shape representing Body.
+     * @return A flash/openfl||openfl.display.Shape representing Body.
      * @throws # If body is null.
      */
     #if nape_swc@:keep #end
@@ -1187,7 +1187,7 @@ class Debug{
      * object colours to better fit an idealised background colour.
      */
     #if nape_swc@:isVar #end
-    public var bgColour(get_bgColour,set_bgColour):Int;
+    public var bgColour(get,set):Int;
     inline function get_bgColour():Int{
         return zpp_inner.bg_col;
     }
@@ -1235,7 +1235,7 @@ class Debug{
      * When using debug drawer, you should add this to your display list.
      */
     #if nape_swc@:isVar #end
-    public var display(get_display,never):flash.display.DisplayObject;
+    public var display(get,never):flash.display.DisplayObject;
     inline function get_display():flash.display.DisplayObject{
         #if flash10 var ret:flash.display.DisplayObject;
         if(zpp_inner.isbmp)ret=zpp_inner.d_bmp.bitmap;
@@ -1269,7 +1269,7 @@ class Debug{
      * @default new Mat23()
      */
     #if nape_swc@:isVar #end
-    public var transform(get_transform,set_transform):Mat23;
+    public var transform(get,set):Mat23;
     inline function get_transform():Mat23{
         if(zpp_inner.xform==null)zpp_inner.setform();
         return zpp_inner.xform.outer;

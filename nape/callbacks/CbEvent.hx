@@ -202,7 +202,7 @@ class CbEvent{
      * BEGIN event corresponds to the start of an interaction
      */
     #if nape_swc@:isVar #end
-    public static var BEGIN(get_BEGIN,never):CbEvent;
+    public static var BEGIN(get,never):CbEvent;
     inline static function get_BEGIN(){
         if(ZPP_Flags.CbEvent_BEGIN==null){
             ZPP_Flags.internal=true;
@@ -216,7 +216,7 @@ class CbEvent{
      * overlapping with the BEGIN event.
      */
     #if nape_swc@:isVar #end
-    public static var ONGOING(get_ONGOING,never):CbEvent;
+    public static var ONGOING(get,never):CbEvent;
     inline static function get_ONGOING(){
         if(ZPP_Flags.CbEvent_ONGOING==null){
             ZPP_Flags.internal=true;
@@ -229,7 +229,7 @@ class CbEvent{
      * END event corresponds to the end of an interaction.
      */
     #if nape_swc@:isVar #end
-    public static var END(get_END,never):CbEvent;
+    public static var END(get,never):CbEvent;
     inline static function get_END(){
         if(ZPP_Flags.CbEvent_END==null){
             ZPP_Flags.internal=true;
@@ -242,7 +242,7 @@ class CbEvent{
      * WAKE event corresponds to the waking of a Body or Constraint in the space.
      */
     #if nape_swc@:isVar #end
-    public static var WAKE(get_WAKE,never):CbEvent;
+    public static var WAKE(get,never):CbEvent;
     inline static function get_WAKE(){
         if(ZPP_Flags.CbEvent_WAKE==null){
             ZPP_Flags.internal=true;
@@ -255,7 +255,7 @@ class CbEvent{
      * SLEEP event corresponds to the sleeping of a Body or Constraint in the space.
      */
     #if nape_swc@:isVar #end
-    public static var SLEEP(get_SLEEP,never):CbEvent;
+    public static var SLEEP(get,never):CbEvent;
     inline static function get_SLEEP(){
         if(ZPP_Flags.CbEvent_SLEEP==null){
             ZPP_Flags.internal=true;
@@ -268,7 +268,7 @@ class CbEvent{
      * BREAK event corresponds to the breaking of a defined limit on a Constraint.
      */
     #if nape_swc@:isVar #end
-    public static var BREAK(get_BREAK,never):CbEvent;
+    public static var BREAK(get,never):CbEvent;
     inline static function get_BREAK(){
         if(ZPP_Flags.CbEvent_BREAK==null){
             ZPP_Flags.internal=true;
@@ -282,7 +282,7 @@ class CbEvent{
      * that two objects 'will' begin to interact, but before any interaction commences.
      */
     #if nape_swc@:isVar #end
-    public static var PRE(get_PRE,never):CbEvent;
+    public static var PRE(get,never):CbEvent;
     inline static function get_PRE(){
         if(ZPP_Flags.CbEvent_PRE==null){
             ZPP_Flags.internal=true;

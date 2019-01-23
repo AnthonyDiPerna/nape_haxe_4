@@ -191,7 +191,7 @@ class Ray{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -205,7 +205,7 @@ class Ray{
      * <code>ray.origin.set(newOrigin)</code>
      */
     #if nape_swc@:isVar #end
-    public var origin(get_origin,set_origin):Vec2;
+    public var origin(get,set):Vec2;
     inline function get_origin():Vec2{
         return zpp_inner.origin;
     }
@@ -235,7 +235,7 @@ class Ray{
      * This direction vector need not be normalised.
      */
     #if nape_swc@:isVar #end
-    public var direction(get_direction,set_direction):Vec2;
+    public var direction(get,set):Vec2;
     inline function get_direction():Vec2{
         return zpp_inner.direction;
     }
@@ -268,7 +268,7 @@ class Ray{
      * @default infinity
      */
     #if nape_swc@:isVar #end
-    public var maxDistance(get_maxDistance,set_maxDistance):Float;
+    public var maxDistance(get,set):Float;
     inline function get_maxDistance():Float{
         return zpp_inner.maxdist;
     }

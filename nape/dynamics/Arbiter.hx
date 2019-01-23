@@ -188,7 +188,7 @@ class Arbiter{
      * When true, this arbiter is sleeping.
      */
     #if nape_swc@:isVar #end
-    public var isSleeping(get_isSleeping,never):Bool;
+    public var isSleeping(get,never):Bool;
     inline function get_isSleeping():Bool{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -199,7 +199,7 @@ class Arbiter{
      * The type of this Arbiter.
      */
     #if nape_swc@:isVar #end
-    public var type(get_type,never):ArbiterType;
+    public var type(get,never):ArbiterType;
     inline function get_type():ArbiterType{
         return ZPP_Arbiter.types[zpp_inner.type];
     }
@@ -242,7 +242,7 @@ class Arbiter{
      * This value is null when this arbiter is not a collision type.
      */
     #if nape_swc@:isVar #end
-    public var collisionArbiter(get_collisionArbiter,never):Null<CollisionArbiter>;
+    public var collisionArbiter(get,never):Null<CollisionArbiter>;
     inline function get_collisionArbiter():Null<CollisionArbiter>{
         return if(isCollisionArbiter())zpp_inner.colarb.outer_zn else null;
     }
@@ -252,7 +252,7 @@ class Arbiter{
      * This value is null when this arbiter is not a fluid type.
      */
     #if nape_swc@:isVar #end
-    public var fluidArbiter(get_fluidArbiter,never):Null<FluidArbiter>;
+    public var fluidArbiter(get,never):Null<FluidArbiter>;
     inline function get_fluidArbiter():Null<FluidArbiter>{
         return if(isFluidArbiter())zpp_inner.fluidarb.outer_zn else null;
     }
@@ -262,7 +262,7 @@ class Arbiter{
      * It will always be the case that <code>arb.shape1.id < arb.shape2.id</code>
      */
     #if nape_swc@:isVar #end
-    public var shape1(get_shape1,never):Shape;
+    public var shape1(get,never):Shape;
     inline function get_shape1():Shape{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -275,7 +275,7 @@ class Arbiter{
      * It will always be the case that <code>arb.shape1.id < arb.shape2.id</code>
      */
     #if nape_swc@:isVar #end
-    public var shape2(get_shape2,never):Shape;
+    public var shape2(get,never):Shape;
     inline function get_shape2():Shape{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -288,7 +288,7 @@ class Arbiter{
      * It will always be the case that <code>arb.shape1.body == arb.body1</code>
      */
     #if nape_swc@:isVar #end
-    public var body1(get_body1,never):Body;
+    public var body1(get,never):Body;
     inline function get_body1():Body{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -301,7 +301,7 @@ class Arbiter{
      * It will always be the case that <code>arb.shape2.body == arb.body2</code>
      */
     #if nape_swc@:isVar #end
-    public var body2(get_body2,never):Body;
+    public var body2(get,never):Body;
     inline function get_body2():Body{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";
@@ -319,7 +319,7 @@ class Arbiter{
      * the handler will keep the state unchanged.
      */
     #if nape_swc@:isVar #end
-    public var state(get_state,never):PreFlag;
+    public var state(get,never):PreFlag;
     inline function get_state():PreFlag{
         #if(!NAPE_RELEASE_BUILD)
         if(zpp_inner.inactiveme())throw "Error: Arbiter not currently in use";

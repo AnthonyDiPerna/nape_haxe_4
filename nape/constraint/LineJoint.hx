@@ -217,7 +217,7 @@ class LineJoint extends Constraint{
      * this body is null will result in an error.
      */
     #if nape_swc@:isVar #end
-    public var body1(get_body1,set_body1):Null<Body>;
+    public var body1(get,set):Null<Body>;
     inline function get_body1():Null<Body>{
         return if(zpp_inner_zn.b1==null)null else zpp_inner_zn.b1.outer;
     }
@@ -255,7 +255,7 @@ class LineJoint extends Constraint{
      * this body is null will result in an error.
      */
     #if nape_swc@:isVar #end
-    public var body2(get_body2,set_body2):Null<Body>;
+    public var body2(get,set):Null<Body>;
     inline function get_body2():Null<Body>{
         return if(zpp_inner_zn.b2==null)null else zpp_inner_zn.b2.outer;
     }
@@ -292,7 +292,7 @@ class LineJoint extends Constraint{
      * This anchor point is defined in the local coordinate system of body1.
      */
     #if nape_swc@:isVar #end
-    public var anchor1(get_anchor1,set_anchor1):Vec2;
+    public var anchor1(get,set):Vec2;
     inline function get_anchor1():Vec2{
         if(zpp_inner_zn.wrap_a1==null)zpp_inner_zn.setup_a1();
         return zpp_inner_zn.wrap_a1;
@@ -317,7 +317,7 @@ class LineJoint extends Constraint{
      * This anchor point is defined in the local coordinate system of body2.
      */
     #if nape_swc@:isVar #end
-    public var anchor2(get_anchor2,set_anchor2):Vec2;
+    public var anchor2(get,set):Vec2;
     inline function get_anchor2():Vec2{
         if(zpp_inner_zn.wrap_a2==null)zpp_inner_zn.setup_a2();
         return zpp_inner_zn.wrap_a2;
@@ -343,7 +343,7 @@ class LineJoint extends Constraint{
      * need not be normalised.
      */
     #if nape_swc@:isVar #end
-    public var direction(get_direction,set_direction):Vec2;
+    public var direction(get,set):Vec2;
     inline function get_direction():Vec2{
         if(zpp_inner_zn.wrap_n==null)zpp_inner_zn.setup_n();
         return zpp_inner_zn.wrap_n;
@@ -368,7 +368,7 @@ class LineJoint extends Constraint{
      * This value must be less than or equal to jointMax.
      */
     #if nape_swc@:isVar #end
-    public var jointMin(get_jointMin,set_jointMin):Float;
+    public var jointMin(get,set):Float;
     inline function get_jointMin():Float{
         return zpp_inner_zn.jointMin;
     }
@@ -393,7 +393,7 @@ class LineJoint extends Constraint{
      * This value must be greater than or equal to jointMin.
      */
     #if nape_swc@:isVar #end
-    public var jointMax(get_jointMax,set_jointMax):Float;
+    public var jointMax(get,set):Float;
     inline function get_jointMax():Float{
         return zpp_inner_zn.jointMax;
     }

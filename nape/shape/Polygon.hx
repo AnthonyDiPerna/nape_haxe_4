@@ -275,7 +275,7 @@ class Polygon extends Shape{
      * debug builds.
      */
     #if nape_swc@:isVar #end
-    public var localVerts(get_localVerts,never):Vec2List;
+    public var localVerts(get,never):Vec2List;
     inline function get_localVerts():Vec2List{
         if(zpp_inner_zn.wrap_lverts==null)zpp_inner_zn.getlverts();
         return zpp_inner_zn.wrap_lverts;
@@ -289,7 +289,7 @@ class Polygon extends Shape{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var worldVerts(get_worldVerts,never):Vec2List;
+    public var worldVerts(get,never):Vec2List;
     inline function get_worldVerts():Vec2List{
         if(zpp_inner_zn.wrap_gverts==null)zpp_inner_zn.getgverts();
         return zpp_inner_zn.wrap_gverts;
@@ -300,7 +300,7 @@ class Polygon extends Shape{
      * This list is immutable.
      */
     #if nape_swc@:isVar #end
-    public var edges(get_edges,never):EdgeList;
+    public var edges(get,never):EdgeList;
     inline function get_edges():EdgeList{
         if(zpp_inner_zn.wrap_edges==null)zpp_inner_zn.getedges();
         return zpp_inner_zn.wrap_edges;

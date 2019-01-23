@@ -183,7 +183,7 @@ class Shape extends Interactor{
      * Type of shape.
      */
     #if nape_swc@:isVar #end
-    public var type(get_type,never):ShapeType;
+    public var type(get,never):ShapeType;
     inline function get_type():ShapeType{
         return ZPP_Shape.types[zpp_inner.type];
     }
@@ -235,7 +235,7 @@ class Shape extends Interactor{
      * @default null
      */
     #if nape_swc@:isVar #end
-    public var body(get_body,set_body):Null<Body>;
+    public var body(get,set):Null<Body>;
     inline function get_body():Null<Body>{
         return if(zpp_inner.body!=null)zpp_inner.body.outer else null;
     }
@@ -253,7 +253,7 @@ class Shape extends Interactor{
      * Faster equivalent to casting this to Circle type
      */
     #if nape_swc@:isVar #end
-    public var castCircle(get_castCircle,never):Null<Circle>;
+    public var castCircle(get,never):Null<Circle>;
     inline function get_castCircle():Null<Circle>{
         return if(isCircle())zpp_inner.circle.outer_zn else null;
     }
@@ -261,7 +261,7 @@ class Shape extends Interactor{
      * Faster equivalent to casting this to Polygon type
      */
     #if nape_swc@:isVar #end
-    public var castPolygon(get_castPolygon,never):Null<Polygon>;
+    public var castPolygon(get,never):Null<Polygon>;
     inline function get_castPolygon():Null<Polygon>{
         return if(isPolygon())zpp_inner.polygon.outer_zn else null;
     }
@@ -275,7 +275,7 @@ class Shape extends Interactor{
      * This Vec2 is immutable.
      */
     #if nape_swc@:isVar #end
-    public var worldCOM(get_worldCOM,never):Vec2;
+    public var worldCOM(get,never):Vec2;
     inline function get_worldCOM():Vec2{
         if(zpp_inner.wrap_worldCOM==null){
             zpp_inner.wrap_worldCOM=Vec2.get(zpp_inner.worldCOMx,zpp_inner.worldCOMy);
@@ -296,7 +296,7 @@ class Shape extends Interactor{
      * is part of a Space is not permitted.
      */
     #if nape_swc@:isVar #end
-    public var localCOM(get_localCOM,set_localCOM):Vec2;
+    public var localCOM(get,set):Vec2;
     inline function get_localCOM():Vec2{
         if(zpp_inner.wrap_localCOM==null){
             if(isCircle())zpp_inner.circle.setupLocalCOM();
@@ -324,7 +324,7 @@ class Shape extends Interactor{
      * Area of the Hhape.
      */
     #if nape_swc@:isVar #end
-    public var area(get_area,never):Float;
+    public var area(get,never):Float;
     inline function get_area():Float{
         zpp_inner.validate_area_inertia();
         return zpp_inner.area;
@@ -333,7 +333,7 @@ class Shape extends Interactor{
      * Non-mass weighted moment of inertia for Shape.
      */
     #if nape_swc@:isVar #end
-    public var inertia(get_inertia,never):Float;
+    public var inertia(get,never):Float;
     inline function get_inertia():Float{
         zpp_inner.validate_area_inertia();
         return zpp_inner.inertia;
@@ -342,7 +342,7 @@ class Shape extends Interactor{
      * Coeffecient of angular fluid drag for this Shape.
      */
     #if nape_swc@:isVar #end
-    public var angDrag(get_angDrag,never):Float;
+    public var angDrag(get,never):Float;
     inline function get_angDrag():Float{
         zpp_inner.validate_angDrag();
         return zpp_inner.angDrag;
@@ -353,7 +353,7 @@ class Shape extends Interactor{
      * @default new Material()
      */
     #if nape_swc@:isVar #end
-    public var material(get_material,set_material):Material;
+    public var material(get,set):Material;
     inline function get_material():Material{
         return zpp_inner.material.wrapper();
     }
@@ -373,7 +373,7 @@ class Shape extends Interactor{
      * @default new InteractionFilter()
      */
     #if nape_swc@:isVar #end
-    public var filter(get_filter,set_filter):InteractionFilter;
+    public var filter(get,set):InteractionFilter;
     inline function get_filter():InteractionFilter{
         return zpp_inner.filter.wrapper();
     }
@@ -396,7 +396,7 @@ class Shape extends Interactor{
      * @default new FluidProperties();
      */
     #if nape_swc@:isVar #end
-    public var fluidProperties(get_fluidProperties,set_fluidProperties):FluidProperties;
+    public var fluidProperties(get,set):FluidProperties;
     inline function get_fluidProperties():FluidProperties{
         zpp_inner.immutable_midstep("Shape::fluidProperties");
         if(zpp_inner.fluidProperties==null)zpp_inner.setFluid(new FluidProperties().zpp_inner);
@@ -424,7 +424,7 @@ class Shape extends Interactor{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var fluidEnabled(get_fluidEnabled,set_fluidEnabled):Bool;
+    public var fluidEnabled(get,set):Bool;
     inline function get_fluidEnabled():Bool{
         return zpp_inner.fluidEnabled;
     }
@@ -449,7 +449,7 @@ class Shape extends Interactor{
      * @default false
      */
     #if nape_swc@:isVar #end
-    public var sensorEnabled(get_sensorEnabled,set_sensorEnabled):Bool;
+    public var sensorEnabled(get,set):Bool;
     inline function get_sensorEnabled():Bool{
         return zpp_inner.sensorEnabled;
     }
@@ -471,7 +471,7 @@ class Shape extends Interactor{
      * This AABB is immutable.
      */
     #if nape_swc@:isVar #end
-    public var bounds(get_bounds,never):AABB;
+    public var bounds(get,never):AABB;
     inline function get_bounds():AABB{
         return zpp_inner.aabb.wrapper();
     }

@@ -186,7 +186,7 @@ class Callback{
      * CbEvent type this callback was generated for.
      */
     #if nape_swc@:isVar #end
-    public var event(get_event,never):CbEvent;
+    public var event(get,never):CbEvent;
     inline function get_event():CbEvent{
         return ZPP_Listener.events[zpp_inner.event];
     }
@@ -194,7 +194,7 @@ class Callback{
      * The Listener which was responsive for this callback being generated.
      */
     #if nape_swc@:isVar #end
-    public var listener(get_listener,never):Listener;
+    public var listener(get,never):Listener;
     inline function get_listener():Listener{
         return zpp_inner.listener.outer;
     }

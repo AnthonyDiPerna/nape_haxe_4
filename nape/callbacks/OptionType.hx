@@ -210,7 +210,7 @@ class OptionType{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var includes(get_includes,never):CbTypeList;
+    public var includes(get,never):CbTypeList;
     inline function get_includes():CbTypeList{
         if(zpp_inner.wrap_includes==null)zpp_inner.setup_includes();
         return zpp_inner.wrap_includes;
@@ -224,7 +224,7 @@ class OptionType{
      * @default []
      */
     #if nape_swc@:isVar #end
-    public var excludes(get_excludes,never):CbTypeList;
+    public var excludes(get,never):CbTypeList;
     inline function get_excludes():CbTypeList{
         if(zpp_inner.wrap_excludes==null)zpp_inner.setup_excludes();
         return zpp_inner.wrap_excludes;

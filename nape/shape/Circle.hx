@@ -313,7 +313,7 @@ class Circle extends Shape{
      * in a debug time error.
      */
     #if nape_swc@:isVar #end
-    public var radius(get_radius,set_radius):Float;
+    public var radius(get,set):Float;
     inline function get_radius():Float{
         return zpp_inner_zn.radius;
     }

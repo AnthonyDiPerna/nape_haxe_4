@@ -199,7 +199,7 @@ class BodyType{
      * optimisatinos can be made for them.
      */
     #if nape_swc@:isVar #end
-    public static var STATIC(get_STATIC,never):BodyType;
+    public static var STATIC(get,never):BodyType;
     inline static function get_STATIC(){
         if(ZPP_Flags.BodyType_STATIC==null){
             ZPP_Flags.internal=true;
@@ -213,7 +213,7 @@ class BodyType{
      * as usual.
      */
     #if nape_swc@:isVar #end
-    public static var DYNAMIC(get_DYNAMIC,never):BodyType;
+    public static var DYNAMIC(get,never):BodyType;
     inline static function get_DYNAMIC(){
         if(ZPP_Flags.BodyType_DYNAMIC==null){
             ZPP_Flags.internal=true;
@@ -228,7 +228,7 @@ class BodyType{
      * you wish and are not effected by any physics.
      */
     #if nape_swc@:isVar #end
-    public static var KINEMATIC(get_KINEMATIC,never):BodyType;
+    public static var KINEMATIC(get,never):BodyType;
     inline static function get_KINEMATIC(){
         if(ZPP_Flags.BodyType_KINEMATIC==null){
             ZPP_Flags.internal=true;

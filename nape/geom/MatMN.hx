@@ -185,7 +185,7 @@ class MatMN{
      * The number of rows in the matrix.
      */
     #if nape_swc@:isVar #end
-    public var rows(get_rows,never):Int;
+    public var rows(get,never):Int;
     inline function get_rows():Int{
         return zpp_inner.m;
     }
@@ -193,7 +193,7 @@ class MatMN{
      * The number of columns in the matrix.
      */
     #if nape_swc@:isVar #end
-    public var cols(get_cols,never):Int;
+    public var cols(get,never):Int;
     inline function get_cols():Int{
         return zpp_inner.n;
     }

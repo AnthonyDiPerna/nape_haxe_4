@@ -191,7 +191,7 @@ class AngleJoint extends Constraint{
      * this body is null will result in an error.
      */
     #if nape_swc@:isVar #end
-    public var body1(get_body1,set_body1):Null<Body>;
+    public var body1(get,set):Null<Body>;
     inline function get_body1():Null<Body>{
         return if(zpp_inner_zn.b1==null)null else zpp_inner_zn.b1.outer;
     }
@@ -229,7 +229,7 @@ class AngleJoint extends Constraint{
      * this body is null will result in an error.
      */
     #if nape_swc@:isVar #end
-    public var body2(get_body2,set_body2):Null<Body>;
+    public var body2(get,set):Null<Body>;
     inline function get_body2():Null<Body>{
         return if(zpp_inner_zn.b2==null)null else zpp_inner_zn.b2.outer;
     }
@@ -268,7 +268,7 @@ class AngleJoint extends Constraint{
      * @default -infinity
      */
     #if nape_swc@:isVar #end
-    public var jointMin(get_jointMin,set_jointMin):Float;
+    public var jointMin(get,set):Float;
     inline function get_jointMin():Float{
         return zpp_inner_zn.jointMin;
     }
@@ -295,7 +295,7 @@ class AngleJoint extends Constraint{
      * @default infinity
      */
     #if nape_swc@:isVar #end
-    public var jointMax(get_jointMax,set_jointMax):Float;
+    public var jointMax(get,set):Float;
     inline function get_jointMax():Float{
         return zpp_inner_zn.jointMax;
     }
@@ -320,7 +320,7 @@ class AngleJoint extends Constraint{
      * @default 1
      */
     #if nape_swc@:isVar #end
-    public var ratio(get_ratio,set_ratio):Float;
+    public var ratio(get,set):Float;
     inline function get_ratio():Float{
         return zpp_inner_zn.ratio;
     }

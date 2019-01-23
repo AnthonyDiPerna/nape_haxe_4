@@ -185,7 +185,7 @@ class CbType{
      * Unique identifier for this CbType.
      */
     #if nape_swc@:isVar #end
-    public var id(get_id,never):Int;
+    public var id(get,never):Int;
     inline function get_id():Int{
         return zpp_inner.id;
     }
@@ -208,7 +208,7 @@ class CbType{
      * In a Listener (Assuming you do not 'remove' this type from the object)
      */
     #if nape_swc@:isVar #end
-    public static var ANY_BODY(get_ANY_BODY,never):CbType;
+    public static var ANY_BODY(get,never):CbType;
     inline static function get_ANY_BODY():CbType{
         return ZPP_CbType.ANY_BODY;
     }
@@ -221,7 +221,7 @@ class CbType{
      * In a Listener (Assuming you do not 'remove' this type from the object)
      */
     #if nape_swc@:isVar #end
-    public static var ANY_CONSTRAINT(get_ANY_CONSTRAINT,never):CbType;
+    public static var ANY_CONSTRAINT(get,never):CbType;
     inline static function get_ANY_CONSTRAINT():CbType{
         return ZPP_CbType.ANY_CONSTRAINT;
     }
@@ -234,7 +234,7 @@ class CbType{
      * In a Listener (Assuming you do not 'remove' this type from the object)
      */
     #if nape_swc@:isVar #end
-    public static var ANY_SHAPE(get_ANY_SHAPE,never):CbType;
+    public static var ANY_SHAPE(get,never):CbType;
     inline static function get_ANY_SHAPE():CbType{
         return ZPP_CbType.ANY_SHAPE;
     }
@@ -247,7 +247,7 @@ class CbType{
      * In a Listener (Assuming you do not 'remove' this type from the object)
      */
     #if nape_swc@:isVar #end
-    public static var ANY_COMPOUND(get_ANY_COMPOUND,never):CbType;
+    public static var ANY_COMPOUND(get,never):CbType;
     inline static function get_ANY_COMPOUND():CbType{
         return ZPP_CbType.ANY_COMPOUND;
     }
@@ -295,7 +295,7 @@ class CbType{
      * @default {}
      */
     #if nape_swc@:isVar #end
-    public var userData(get_userData,never):Dynamic<Dynamic>;
+    public var userData(get,never):Dynamic<Dynamic>;
     inline function get_userData():Dynamic<Dynamic>{
         if(zpp_inner.userData==null){
             zpp_inner.userData=cast{};
@@ -310,7 +310,7 @@ class CbType{
      * This list is not only readonly, but also immutable.
      */
     #if nape_swc@:isVar #end
-    public var interactors(get_interactors,never):InteractorList;
+    public var interactors(get,never):InteractorList;
     inline function get_interactors():InteractorList{
         if(zpp_inner.wrap_interactors==null){
             zpp_inner.wrap_interactors=ZPP_InteractorList.get(zpp_inner.interactors,true);
@@ -325,7 +325,7 @@ class CbType{
      * This list is not only readonly, but also immutable.
      */
     #if nape_swc@:isVar #end
-    public var constraints(get_constraints,never):ConstraintList;
+    public var constraints(get,never):ConstraintList;
     inline function get_constraints():ConstraintList{
         if(zpp_inner.wrap_constraints==null){
             zpp_inner.wrap_constraints=ZPP_ConstraintList.get(zpp_inner.constraints,true);

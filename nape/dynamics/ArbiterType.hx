@@ -198,7 +198,7 @@ class ArbiterType{
      * Collision type Arbiter.
      */
     #if nape_swc@:isVar #end
-    public static var COLLISION(get_COLLISION,never):ArbiterType;
+    public static var COLLISION(get,never):ArbiterType;
     inline static function get_COLLISION(){
         if(ZPP_Flags.ArbiterType_COLLISION==null){
             ZPP_Flags.internal=true;
@@ -211,7 +211,7 @@ class ArbiterType{
      * Sensor type Arbiter.
      */
     #if nape_swc@:isVar #end
-    public static var SENSOR(get_SENSOR,never):ArbiterType;
+    public static var SENSOR(get,never):ArbiterType;
     inline static function get_SENSOR(){
         if(ZPP_Flags.ArbiterType_SENSOR==null){
             ZPP_Flags.internal=true;
@@ -224,7 +224,7 @@ class ArbiterType{
      * Fluid type Arbiter.
      */
     #if nape_swc@:isVar #end
-    public static var FLUID(get_FLUID,never):ArbiterType;
+    public static var FLUID(get,never):ArbiterType;
     inline static function get_FLUID(){
         if(ZPP_Flags.ArbiterType_FLUID==null){
             ZPP_Flags.internal=true;
