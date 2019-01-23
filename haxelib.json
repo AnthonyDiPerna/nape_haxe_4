@@ -1,0 +1,10 @@
+{
+    "name":         "nape",
+    "url":          "https://github.com/deltaluca/nape",
+    "license":      "BSD",
+    "tags":         ["cross", "game"],
+    "description":  "Nape 2D Physics Engine",
+    "version":      "2.0.20",
+    "releasenote":  "Inline change for compatibilty with next Haxe release after pull request merge",
+    "contributors": ["deltaluca"]
+}
